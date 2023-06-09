@@ -48,4 +48,6 @@ public class Observer : MonoBehaviour
             m_IsPlayerInRange = false;
         }
     }
+
+    // 벽을 넘어서 감지하는것을 방지하기위함
 }

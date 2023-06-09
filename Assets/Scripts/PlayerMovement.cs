@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         m_Movement.Set(horizontal, 0f, vertical);
         m_Movement.Normalize();
-        bool hasHorizontalInput = !Mathf.Approximately(horizontal, 0f);  // 가까운 기준이머냐?
+        bool hasHorizontalInput = !Mathf.Approximately(horizontal, 0f);  // 가까운 기준이머냐 0.000001 도 0으로 치려고
         bool hasVerticalInput = !Mathf.Approximately(vertical, 0f);
         bool isWalking = hasHorizontalInput || hasVerticalInput;
         m_Animator.SetBool("IsWalking", isWalking);
